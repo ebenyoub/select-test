@@ -1,0 +1,111 @@
+.container {
+    width: 40em;
+    border: 1px solid #777;
+    border-radius: 0.25em;
+    padding: 2rem;
+    font-size: 24px;
+}
+
+.input-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    min-height: 1.5em;
+    width: 100%;
+    border: 0.05em solid #777;
+    border-radius: 0.25em;
+    padding: 0.5em;
+    padding-right: 3.5em;
+    margin-top: .5em;
+    cursor: pointer;
+    gap: .5em;
+}
+
+.input-list:focus {
+    border-color: hsl(200, 100%, 50%);
+    border-width: .1em;
+}
+
+.input-item {
+    display: flex;
+    align-items: center;
+    padding: .25em .5em;
+    border: .05em solid #777;
+    border-radius: .25em;
+}
+
+.input-item:hover, .input-item:focus {
+    background-color: hsl(350, 50%, 95%);
+    border-color: red;
+}
+
+.input-item:hover .clear-item,
+.input-item:focus .clear-item {
+    color: red;
+}
+
+.clear-item {
+    padding-left: .5em;
+    color: #777;
+    font-weight: 700;
+}
+
+.clear-all {
+    position: absolute;
+    right: 1em;
+    color: #999;
+    font-size: 2em;
+}
+
+.clear-all:hover {
+    color: red;
+}
+
+.caret {
+    position: absolute;
+    right: 0.5em;
+    color: #999;
+    transform: translateY(-2px);
+    transition: transform .2s ease;
+}
+
+.caret.open {
+    transform: rotate(-180deg);
+}
+
+.options{
+    position: absolute;
+    display: none;
+    list-style: none;
+    border: 0.05em solid #777;
+    border-radius: 0.25em;
+    width: 100%;
+    max-height: 15em;
+    overflow-y: auto;
+    z-index: 100;
+    left: 0;
+    top: calc(100% + .25em);
+    background-color: #fff;
+    overflow-y: auto;
+}
+
+.options.show {
+    display: block;
+}
+
+.option {
+    padding: .255em .5em;
+    cursor: pointer;
+}
+
+.option.highlighted {
+    background-color: hsl(200, 100%, 50%);
+    color: white;
+}
+
+.option.selected {
+    background-color: hsl(200, 100%, 70%);
+}
+
